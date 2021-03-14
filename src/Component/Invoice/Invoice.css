@@ -1,0 +1,50 @@
+.invoiceTable{
+    width: 100%;
+
+}
+.invoiceTableHead{
+    color: white;
+    align-items: center;
+    text-align: center;
+    background-color: #386948
+}
+th{
+    padding: 1%;
+}
+.invoiceTableBody{
+    font-weight: 500;
+    background-color: #3869482c
+}
+td{
+    padding: .5%;
+}
+.invoiceAmountBottom{
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+   
+}
+
+.invoiceCompanyInfo{
+    display: grid;
+    margin: 0 0 2% 2% ;
+}
+.invoiceAmountSummary{
+    margin: 2% 0 2% 2% ;
+}
+.invoiceBottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.printBtn{
+    padding: 2%;
+}
+.printBtn button{
+    height: 40px;
+    width: 100px;
+    background-color: green;
+    font-weight: bold;
+    color: #ffffff;
+    
+}

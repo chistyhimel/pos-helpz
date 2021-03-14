@@ -1,0 +1,7 @@
+.modal{
+    display: grid;
+    justify-content: center;
+}
+.modal input{
+    margin: .5rem;
+}

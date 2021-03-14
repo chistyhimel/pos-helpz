@@ -1,0 +1,20 @@
+.MuiTypography-h6 {
+    font-size: 11px !important;
+    font-weight: 800 !important;
+}
+/* .makeStyles-media-4 {
+    margin: 1.5rem !important;
+} */
+.MuiCardMedia-root {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: .8rem !important;
+}
+/* .productViewCardBody{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr)); 
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 0.8rem 0.6rem;
+} */

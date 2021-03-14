@@ -1,0 +1,30 @@
+.table{
+    width: 100%;
+    /* background-color: aqua; */
+}
+.tb{
+    position: relative;
+    height:345px;
+    width: 100%; 
+    overflow:auto;
+}
+th{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+td{    
+    padding-top: 1rem;
+    text-align: center;
+}
+.ItemName{
+    width: 35%;
+}
+.quantity{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    cursor: pointer;
+}
+.quantityInput{
+    width: 20%;
+}

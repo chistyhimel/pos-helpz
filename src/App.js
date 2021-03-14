@@ -1,24 +1,66 @@
-import logo from './logo.svg';
+import { createContext, useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './App.css';
+import Home from "./Component/Home/Home";
+import Invoice from "./Component/Invoice/Invoice";
+import Login from "./Component/Login/Login";
+import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+import TestForm from "./Component/TestForm/TestForm";
+
+export const UserContext = createContext();
 
 function App() {
+
+  const [productInfo, setProductInfo] = useState([]);
+  const [loggedInUser, setLoggedInUser] = useState({});
+
+
+  useEffect(() => {
+    //let [localStorages] = localStorage.getItem('userInfo');
+    // console.log(localStorage);
+    if ("userInfo" in localStorage) {
+      var user_data = JSON.parse(localStorage["userInfo"]);
+      console.log(user_data);
+      setLoggedInUser(user_data); 
+    }
+  }, []);
+
+  console.log(loggedInUser);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={
+      {
+        value1: [productInfo, setProductInfo],
+        value2: [loggedInUser, setLoggedInUser]
+      }
+
+    }>
+      <div className="App">
+        <Router>
+          <Switch>
+            <PrivateRoute path="/home">
+              <Home />
+            </PrivateRoute>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/textform">
+              <TestForm />
+            </Route>
+            <Route path="/invoice">
+              <Invoice />
+            </Route>
+            <PrivateRoute path="/">
+              <Home />
+            </PrivateRoute>
+          </Switch>
+        </Router>
+      </div>
+    </UserContext.Provider>
   );
 }
 

@@ -1,0 +1,18 @@
+.ProductViewTableBody{
+    height: auto;
+    width: 65%;
+}
+.Products{
+    padding: 2rem;
+    /* background-color: pink; */
+    
+}
+.Products label strong{
+    margin-left: 2rem;
+    padding-bottom: 2rem;
+}
+.allProducts{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 0.8rem 0.6rem;
+}

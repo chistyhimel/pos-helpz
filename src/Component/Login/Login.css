@@ -1,0 +1,25 @@
+.loginForm{
+    border: 2px solid #000;
+    width: 40%;
+    padding: 2%;
+    margin: auto;
+    display: grid;
+     /*justify-content: center; */
+    position: relative;
+    top: 150px;
+}
+.loginForm img{
+    height: 80px;
+    width: 150px;
+    justify-self: center;
+}
+.loginForm form{
+    display: grid;   
+    width: 60%;
+    padding: 2%;
+    margin: auto;
+   
+}
+.loginForm form input{
+    margin: 2%;
+}

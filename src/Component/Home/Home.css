@@ -1,0 +1,88 @@
+/* #button-5 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-5 a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+  
+  #translate {
+    transform: rotate(50deg);
+    width: 100%;
+    height: 250%;
+    left: -200px;
+    top: -30px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .3s ease-Out;
+  }
+  
+  #button-5:hover #translate {
+    left: 0;
+  }
+  
+  #button-5:hover a {
+    color: #2D3142;
+  }
+
+
+
+  .test{
+      height: 60px;
+      width: 100px;
+      border: 1px solid #000;
+      border-radius: 1rem;
+      margin: 1rem;
+      background-color: aquamarine;
+      transition: all 0.5s ease-out; 
+  }
+  .test:hover{
+      background-color: aqua;
+  }
+
+  .buttonItem{
+    height: 40px;
+    width: 80px;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    margin: .5rem;
+    background-color: #f2f2f2;
+    position: relative;
+    left: -7rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out
+  }
+  .buttonItem:hover{
+    background-color: gray;
+  }
+  .test:hover .buttonItem{
+    left: 0;
+  }
+
+
+  .test1{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    padding: .5rem;
+    margin: 5rem;
+    background-color: #fff;
+    align-items: center;
+    transition: all 1s ease-out  
+  }
+  .test1:hover{
+    border: 1px solid #000;
+    border-radius: 0 1rem 0 1rem;
+  }
+
+ */
+.homeBody{
+  display: flex;
+  justify-content: space-evenly;  
+  gap: 10px;
+  padding: .5rem;
+  background-color: #80808018;
+}

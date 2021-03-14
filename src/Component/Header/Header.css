@@ -1,0 +1,60 @@
+.buttonContent{
+    height: 40px;
+    width: 80px;
+    /* background-color: #5dd32f; */
+    text-align: center;
+    align-items: center;
+    margin: .6rem; 
+    position: absolute;
+}
+
+.buttonContent a{
+    position: relative;
+    top: .5rem; 
+}
+.buttonBody{
+    height: 60px;
+    width: 100px;
+    cursor: pointer;
+    /* background-color: aqua; */
+    align-items: center;
+    position: relative;
+    transition: all 0.6s ease-out;
+    margin-right: 1rem;
+}
+.buttonBody:hover{
+    /* border: 1px solid #000; */
+    border-radius: 0 1rem 0 1rem;
+    background-color: orange;
+}
+
+.buttonItems{
+    padding: 1rem;    
+    /* background-color: pink; */
+    display: flex;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: gray;
+}
+.logo{
+    height: auto;
+    width: 30%;
+    /* background-color:azure; */
+}
+.logoBody{
+    height: auto;
+    width: 50%;
+    /* background-color: red;  */
+    align-items: center;
+    position: relative;
+    left: 20%;
+    
+}
+/* .logoBody:hover{
+    transform: rotate(20deg);
+} */
+

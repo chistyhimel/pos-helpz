@@ -1,0 +1,118 @@
+.cartBottom{
+    position: absolute;
+    bottom: 0;
+    width: 34.5%;  
+    font-weight: bold; 
+    /* background-color: #afdbdb79; */
+}
+
+.cartBottomUpper{
+    display: flex;
+    justify-content: space-evenly;  
+    padding: .5rem;
+    background-color: #fff;
+}
+a{
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+.sec{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    text-align: right ;
+}
+.totalPayable{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    text-align: right ;
+    background-color: gray;
+    color: white;
+}
+.title label{
+    text-align: right ;
+    margin-right: 2rem;
+}
+.amount input{
+    width: 50px;
+} 
+#tnxIdBody{
+    display: none;
+}
+#tnxID{    
+    width: 100px;
+}
+.paymentButton{
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+   
+
+}
+.up{
+    display: flex;
+    justify-content: space-evenly;
+}
+.low{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+button:focus{
+    text-decoration: none;
+}
+.paymentMethod{
+    height: 40px;
+    width: 100%;
+    background-color: #ffa60094; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 35%;
+    
+}
+
+.paymentMethod:hover{
+    background-color: orange; 
+}
+.paymentButtonLower{
+    height: 40px;
+    width: 100%;
+}
+.Order{
+    background-color: #87cfebab; 
+}
+.Order:hover{
+    background-color: skyblue; 
+}
+.Cancel{
+    background-color: #ff000093; 
+}
+.Cancel:hover{
+    background-color: red; 
+}
+.Bill{
+    background-color: #2698c5ab; 
+}
+.Bill:hover{
+    background-color: #0d7eaa; 
+}
+
+.Payment{
+    height: 60px;
+    width: 100%;
+    background-color: #008000b0;
+}
+.Payment:hover{   
+    background-color: #008000;
+}
+.paymentButtonLower svg{
+    height: 12px;
+    width: 12px;
+}
