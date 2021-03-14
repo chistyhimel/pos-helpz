@@ -1,10 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
 import Home from "./Component/Home/Home";
 import Invoice from "./Component/Invoice/Invoice";
 import Login from "./Component/Login/Login";
@@ -14,37 +10,30 @@ import TestForm from "./Component/TestForm/TestForm";
 export const UserContext = createContext();
 
 function App() {
-
-  const [productInfo, setProductInfo] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState({});
-
+  const [productInfo, setProductInfo] = useState([]);
 
   useEffect(() => {
-    //let [localStorages] = localStorage.getItem('userInfo');
-    // console.log(localStorage);
-    if ("userInfo" in localStorage) {
-      var user_data = JSON.parse(localStorage["userInfo"]);
-      console.log(user_data);
-      setLoggedInUser(user_data); 
+    if ("user" in localStorage) {
+      const user_data = JSON.parse(localStorage["user"]);
+      setLoggedInUser(user_data);
     }
   }, []);
-
   console.log(loggedInUser);
 
   return (
-    <UserContext.Provider value={
-      {
+    <UserContext.Provider
+      value={{
         value1: [productInfo, setProductInfo],
-        value2: [loggedInUser, setLoggedInUser]
-      }
-
-    }>
+        value2: [loggedInUser, setLoggedInUser],
+      }}
+    >
       <div className="App">
         <Router>
           <Switch>
-            <PrivateRoute path="/home">
-              <Home />
-            </PrivateRoute>
+            <Route exact path="/">
+              {loggedInUser.email ? <Home /> : <Login />}
+            </Route>
             <Route path="/login">
               <Login />
             </Route>
@@ -54,9 +43,6 @@ function App() {
             <Route path="/invoice">
               <Invoice />
             </Route>
-            <PrivateRoute path="/">
-              <Home />
-            </PrivateRoute>
           </Switch>
         </Router>
       </div>
